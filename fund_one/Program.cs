@@ -44,7 +44,32 @@ namespace ConsoleApplication
             } 
             
             // If you used modulus in the last step, try doing the same without using it. Vice-versa for those who didn't!
+            int counter_3 = 3;
+            int counter_5 = 5;
+            for (int i = 15; i >= 0; i--)
+            {
+                counter_3 -= 1;
+                counter_5 -= 1;
+                if (counter_3 == 0 && counter_5 == 0)
+                {
+                    counter_3 = 3;
+                    counter_5 = 5;
+                    Console.WriteLine("/FizzBuzz");
 
+                }
+
+                if (counter_3 == 0)
+                {
+                    counter_3 = 3;
+                    Console.WriteLine("/Fizz");
+                }
+
+                if (counter_5 == 0)
+                {
+                    counter_5 = 5;
+                    Console.WriteLine("/Buzz");
+                }
+            }
             // Generate 10 random values and output the respective word, in relation to step three, for the generated values
             Random rand = new Random();
             for (int i = 0; i <= 10; i++)
