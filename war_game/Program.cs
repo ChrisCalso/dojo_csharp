@@ -121,9 +121,9 @@ namespace War
                         {
                             compare1 = player1.DealHand(player1.player_hand);
                             System.Console.WriteLine();
-                            System.Console.WriteLine(player1.player_name + " drew: " + compare1.card_val + " Remaining # of cards: " + player1.player_hand.Count);
+                            System.Console.WriteLine(player1.player_name + " drew: " + compare1.card_val);
                             compare2 = player2.DealHand(player2.player_hand);
-                            System.Console.WriteLine(player2.player_name + " drew: " + compare2.card_val + " Remaining # of cards: " + player2.player_hand.Count);
+                            System.Console.WriteLine(player2.player_name + " drew: " + compare2.card_val);
                             pile2.Add(compare1);
                             pile2.Add(compare2);
 
