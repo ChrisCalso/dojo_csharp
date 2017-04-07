@@ -18,12 +18,12 @@ namespace ConsoleApplication
             //========================================================
 
             //There is only one artist in this collection from Mount Vernon, what is their name and age?
-            Artist artistFromMtVernon = Artists.Where(artist1 => artist1.Hometown == "Mount Vernon").First();
-            System.Console.WriteLine("Name: " + artistFromMtVernon.ArtistName + " Age: " + artistFromMtVernon.Age);
+            Artist mt_vernon_guy = Artists.First(arteest => arteest.Hometown == "Mount Vernon");
+            System.Console.WriteLine(mt_vernon_guy.ArtistName + " " + mt_vernon_guy.Age);
 
             //Who is the youngest artist in our collection of artists?
-            Artist youngest_artist = Artists.OrderBy(artist2 => artist2.Age).First();
-            System.Console.WriteLine("Name of youngest artist: " + youngest_artist.ArtistName + " Age: " + youngest_artist.Age);
+            Artist young_guy = Artists.OrderBy(artist => artist.Age).First();
+            System.Console.WriteLine(young_guy.ArtistName);
 
             //Display all artists with 'William' somewhere in their real name
             List<Artist> william_artists = Artists.Where(artist3 => artist3.RealName.Contains("William")).ToList();
@@ -51,6 +51,12 @@ namespace ConsoleApplication
             //(Optional) Display the Group Name of all groups that have members that are not from New York City
 
             //(Optional) Display the artist names of all members of the group 'Wu-Tang Clan'
+            List<string> wu_tang_members = Artists.Where(artist => artist.GroupId == 1).Select(artist => artist.ArtistName).ToList();
+            System.Console.WriteLine("Wu-Tang Members: ");
+            foreach (string name in wu_tang_members)
+            {
+                System.Console.WriteLine(name);
+            }
         }
     }
 }
