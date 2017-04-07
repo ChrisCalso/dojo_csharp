@@ -11,10 +11,9 @@ namespace ConsoleApplication
         }
 
         // Samurai should have a method called death_blow, which when invoked should attack an object and decreases its health to 0 if it has less than 50 health
-        public void death_blow(object target)
+        public void death_blow(Human victim)
         {
-            Human victim = target as Human;
-            if (victim.health < 50)
+            if (victim.health <= 50)
             {
                 victim.health = 0;
             }

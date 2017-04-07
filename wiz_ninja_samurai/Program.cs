@@ -6,12 +6,14 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            // Ninja sam = new Ninja("Sam");
+            Wizard sam = new Wizard("Sam");
             // System.Console.WriteLine(sam.name);
             // System.Console.WriteLine(sam.health);
             // sam.Get_Away();
             // System.Console.WriteLine(sam.health);
+            Samurai jack = new Samurai("Jack");
+            jack.death_blow(sam);
+            System.Console.WriteLine("sam health " + sam.health);
         }
     }
 }
