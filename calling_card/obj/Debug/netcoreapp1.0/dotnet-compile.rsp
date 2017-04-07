@@ -162,6 +162,7 @@
 --reference:/Users/nicolezurita/.nuget/packages/System.Threading.Timer/4.0.1/ref/netstandard1.2/System.Threading.Timer.dll
 --reference:/Users/nicolezurita/.nuget/packages/System.Xml.ReaderWriter/4.0.11/ref/netstandard1.3/System.Xml.ReaderWriter.dll
 --reference:/Users/nicolezurita/.nuget/packages/System.Xml.XDocument/4.0.11/ref/netstandard1.3/System.Xml.XDocument.dll
+--resource:"/Users/nicolezurita/Desktop/dojo_csharp/calling_card/obj/Debug/netcoreapp1.0/calling_carddotnet-compile.deps.json",calling_card.deps.json
 /Users/nicolezurita/Desktop/dojo_csharp/calling_card/Program.cs
 /Users/nicolezurita/Desktop/dojo_csharp/calling_card/Startup.cs
 /Users/nicolezurita/Desktop/dojo_csharp/calling_card/Controllers/HelloController.cs

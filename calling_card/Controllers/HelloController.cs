@@ -9,9 +9,9 @@ namespace CallingCard.Controllers
         // A GET method
         [HttpGet]
         [Route("index")]
-        public string Index()
+        public IActionResult Index()
         {
-            return "Hello World!";
+            return View();
         }
 
         [HttpGet]

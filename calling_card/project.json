@@ -1,6 +1,7 @@
 {
   "buildOptions": {
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "preserveCompilationContext": true
   },
   "debugType": "portable", 
   "dependencies": {
