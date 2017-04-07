@@ -4,7 +4,7 @@
     "debugType": "portable",
     "emitEntryPoint": true
   },
-  "dependencies": {},
+  "dependencies": {"MySql.Data": "7.0.7-M61"},
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
