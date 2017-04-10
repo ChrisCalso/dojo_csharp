@@ -1,0 +1,34 @@
+* {
+    font-family: "Arial", "sans-serif";
+}
+
+.nav-link {
+    margin-right: 35px;
+    margin-left: 415px;
+}
+
+img {
+    background-color: pink;
+    margin-top: 80px;
+    display: inline-block;
+    margin-left: 450px;
+}
+
+#about-me {
+    display: inline-block;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.back-link {
+    text-align: center;
+}
+
+#form {
+    text-align: center;
+}
