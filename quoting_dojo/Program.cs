@@ -1,20 +1,18 @@
-﻿using System;
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Dojodachi
+namespace quoting_dojo
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            IWebHost host = new WebHostBuilder()
-                .UseContentRoot(Directory.GetCurrentDirectory())
+            var host = new WebHostBuilder()
                 .UseKestrel()
-                // Use Startup.cs to configure server
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
-                .UseIISIntegration()
                 .Build();
+
             host.Run();
         }
     }

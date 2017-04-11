@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Quotes";
+}
+<h1>Here Are The Awesome Quotes!</h1>
+<p>@{
+        foreach (Dictionary<string, object> item in ViewBag.users)
+        {
+            ViewBag.Name = item["name"];
+            <p>@ViewBag.Name</p>;
+            ViewBag.Quote = item["quote"];
+            <p>"@ViewBag.Quote"</p>;
+            ViewBag.Created = item["created_at"];
+            <p>@ViewBag.Created</p>;
+            <p>----------------------------------------------------</p>
+        }
+}</p>
+
+<p><a href="/">Back</a></p>
