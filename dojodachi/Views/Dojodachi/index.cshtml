@@ -1,0 +1,21 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Dojodachi</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="~/css/style.css">
+    </head>
+    <body>
+        <h1>Dojodachi</h1>
+        <h3>Fullness: @ViewBag.fullness</h3>
+        <h3>Happiness: @ViewBag.happiness</h3>
+        <h3>Meals: @ViewBag.meals</h3>
+        <h3>Energy: @ViewBag.energy</h3>
+        <img src="~/img/mochi.jpg" alt="mochi-pic">
+        <form action="feed" method="post"><input type="submit" value="Feed"></input></form>
+        <form action="play" method="post"><input type="submit" value="Play"></input></form>
+        <form action="work" method="post"><input type="submit" value="Work"></input></form>
+        <form action="sleep" method="post"><input type="submit" value="Sleep"></input></form>
+        <p>@ViewBag.test</p>
+    </body>
+</html>

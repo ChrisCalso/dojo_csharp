@@ -1,0 +1,28 @@
+* {
+    text-align: center;
+    font-family: "Arial", "sans-serif";
+    vertical-align: top;
+}
+
+h3 {
+    display: inline-block;
+    margin-right: 95px;
+}
+
+img {
+    display: block;
+    height: 350px;
+    margin-left: 600px;
+}
+
+input {
+    display: inline-block;
+    margin-right: 50px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+form {
+    display: inline-block;
+    font-size: 20px;
+}
