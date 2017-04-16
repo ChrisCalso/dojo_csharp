@@ -19,7 +19,7 @@ namespace form_submission.Controllers
         }
 
         [HttpPost]
-        [Route("success")]
+        [Route("")]
         public IActionResult Success(string first_name, string last_name, string age, string email, string password)
         {
             User newuser = new User
