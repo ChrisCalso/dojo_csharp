@@ -1,0 +1,33 @@
+
+<h1>CodingDojo Wall</h1>
+<h1>Welcome @ViewBag.Curr_user.First_Name!</h1>
+<h4>Post a Message: </h4>
+<form action="add-message" method="post">
+    <textarea name="new_message" rows="5" cols="100"></textarea>
+    <input type="submit" name="submit" value="Post a Message">
+</form>
+<p>@{
+        foreach (Dictionary<string, object> item in ViewBag.messages)
+        {
+            ViewBag.Message = item["message"];
+            ViewBag.Created = item["created_at"];
+            ViewBag.MessageId = (int)item["id"];
+            <p>@ViewBag.Curr_user.First_Name : @ViewBag.Created</p>;
+            <p>@ViewBag.Message</p>;
+            if (((Dictionary<int, List<string>>)ViewBag.message_comment_dict).ContainsKey(ViewBag.MessageId))
+            {
+                <p>loading comments for id: @ViewBag.MessageId</p>;
+                foreach (string comment in ((Dictionary<int, List<string>>)ViewBag.message_comment_dict)[ViewBag.MessageId])
+                {
+                    <p>@comment</p>
+                }
+            }
+            <form action="add-comment" method="post">
+                <input type="hidden" name="message_id" value="@ViewBag.MessageId">
+                <p><b>Post a Comment</b></p>
+                <textarea name="new_comment" rows="3" cols="100"></textarea>
+                <input type="submit" name="submit" value="Post a Comment">
+            </form>
+        }
+}</p>
+<a href="logout">Logout</a>
