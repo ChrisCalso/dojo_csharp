@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Reviews";
+}
+<h1>Reviews...</h1> 
+<p>@{
+foreach (var review_item in ViewBag.AllReviews)
+        {
+            ViewBag.RestaurantName = review_item.RestaurantName;
+            ViewBag.ReviewerName = review_item.ReviewerName;
+            ViewBag.DateOfVisit = review_item.DateOfVisit;
+            ViewBag.StarRating = review_item.StarRating;
+            ViewBag.ReviewContent = review_item.ReviewContent;
+            <p>Review for: @ViewBag.RestaurantName @ViewBag.StarRating stars</p>;
+            <p>Reviewer: @ViewBag.ReviewerName, @ViewBag.DateOfVisit</p>;
+            <p>Review: @ViewBag.ReviewContent</p>;
+            <p>----------------------------------------------------</p>
+        }
+}</p>
+<a href="/">Back</a>
